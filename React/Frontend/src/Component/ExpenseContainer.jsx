@@ -8,7 +8,7 @@ function ExpenseContainer() {
     const [expense, setExpense] = useState([]);
     async function fetchExpense(){
         try{
-            const response = await fetch('http://localhost:3000/expense');
+            const response = await fetch('https://expense-tracker-backend-64c7.onrender.com/expense');
             if(!response.ok){
                 throw new Error('network error');
             }
@@ -37,7 +37,7 @@ useEffect(()=>{
 
 async function postExpense(expense){
     try{
-        const response = await fetch('http://localhost:3000/expense',{
+        const response = await fetch('https://expense-tracker-backend-64c7.onrender.com/expense',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -55,7 +55,7 @@ if(!response.ok){
 }
 async function deleteExpensedb(id){
     try{
-        const response = await fetch(`http://localhost:3000/expense/${id}`,{
+        const response = await fetch(`https://expense-tracker-backend-64c7.onrender.com/expense${id}`,{
             method:'DELETE',
         });
 
