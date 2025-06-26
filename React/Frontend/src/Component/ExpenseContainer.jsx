@@ -55,7 +55,7 @@ if(!response.ok){
 }
 async function deleteExpensedb(id){
     try{
-        const response = await fetch(`https://expense-tracker-backend-64c7.onrender.com/expense${id}`,{
+        const response = await fetch(`https://expense-tracker-backend-64c7.onrender.com/expense`,{
             method:'DELETE',
         });
 
